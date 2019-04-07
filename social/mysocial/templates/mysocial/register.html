@@ -1,0 +1,17 @@
+{% extends 'mysocial/base.html' %}
+
+{% block head %}
+<title>Регистрация</title>
+{% endblock %}
+
+{% block content %}
+
+    <form method="POST" class="post-form">{% csrf_token %}
+        <h1>Создайте Аккаунт</h1>
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Создать</button>
+        <p class="pod">
+        Уже есть аккаунт? <a class="rll" href="{% url 'login' %}">Войдите в него</a>
+        </p>
+    </form>
+{% endblock %}

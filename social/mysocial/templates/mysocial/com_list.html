@@ -1,0 +1,21 @@
+{% extends 'mysocial/base.html' %}
+
+{% block head %}
+<title>Новости</title>
+{% endblock %}
+
+{% block content %}
+                {% for post in posts %}
+                    <div class="post">
+                        <p class="author"> Автор: {{ post.author}} <p style="color:gray;">{{ post.published_date }}</p></p>
+                        <h1><a href="{% url 'com_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+                        <p style="color:black">{{ post.text|linebreaksbr }}</p>
+                         {% if post.image %}
+                            <img src='{{ post.image.url }}' class='img' />
+                         {% endif %}
+        {% if user.is_authenticated %}
+            <a class="btn btn-default" id="change" href="{% url 'com_edit' pk=post.pk %}">Изменить</a>
+        {% endif %}
+                    </div>
+                {% endfor %}
+{% endblock %}

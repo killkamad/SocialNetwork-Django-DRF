@@ -1,0 +1,67 @@
+
+<html>
+    <head>
+        {% block head %}
+        <title>Base</title>
+        {% endblock %}
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'mysocial/css228/social.css' %}">
+    </head>
+    <body>
+    <header>
+        <div class="header">
+        <div class="header__section">
+            <div class="header__item headerlogo">
+                <a href="/"><img class="Imag" src="{% static 'mysocial/Images/rofl1.png' %}"></a>
+            </div>
+				<div class="headerButton">
+                    {% if user.is_authenticated %}
+                    <a href="/logout">Выйти</a>
+                    {% else %}
+                    <a href="/login">Войти</a>
+                    <a href="/register">Регистрация</a>
+                    {% endif %}
+				</div>
+		</div>
+            </div>
+    </header>
+
+    <div class="container">
+
+    <div class="art">
+        <ul class="ssilki">
+            <li><a href="/Mypage">Моя страница</a></li>
+            <li><a href="/Friends">Друзья</a></li>
+            <li><a href="/Musicc">Музыка</a></li>
+            <li><a href="/Feed">Новости</a></li>
+            <li><a href="/Games">Игры</a></li>
+        </ul>
+    </div>
+
+        <div class="content">
+            <!--{% if messages %}-->
+            <!--{% for message in messages %}-->
+                  <!--<div class="alert alert-{{ message.tags }}">-->
+                    <!--{{ message }}-->
+                  <!--</div>-->
+            <!--{% endfor %}-->
+          <!--{% endif %}-->
+            {% if user.is_authenticated %}
+            <a href="{% url 'com_new' %}" class="top-menu">Добавить...</a>
+            {% endif %}
+            {% block content %}
+            {% endblock %}
+        </div>
+    <footer>
+        <div class="footerp">
+            <p>&copy; 2018 RoflanCompany</p>
+            <p>Почта: killka_m@mail.ru</p>
+            <p>Номер: +7(707)+101+06+20</p>
+            <p>Instagram: killka_m</p>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>
