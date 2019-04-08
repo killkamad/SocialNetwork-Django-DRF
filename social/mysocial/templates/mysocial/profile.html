@@ -1,0 +1,27 @@
+{% extends 'mysocial/base.html' %}
+
+{% block head %}
+<title>Моя страница</title>
+{% endblock %}
+
+
+{% block content %}
+<div class="contain">
+    {% if user.is_authenticated %}
+        <a class="btn btn-default" id="edit_prof" href="{% url 'edit_profile'%}">Изменить информацию</a>
+    {% endif %}
+    <h1 style="margin: 0; margin-top: 5px;">Моя страница</h1>
+    <p>Имя пользователя: {{ user }}</p>
+    <p>Имя: {{ user.first_name }}</p>
+    <p>Фамилия: {{ user.last_name }}</p>
+    <p>Email: {{ user.email }}</p>
+    <p>Описание: {{ user.description }}</p>
+    <p>Phone: {{ user.userprofile.phone }}</p>
+    <p>City: {{ user.userprofile.city }}</p>
+    <p>Website: {{ user.userprofile.website }}</p>
+    {% if user.userprofile.image %}
+    <img src="{{ user.userprofile.image.url }}" width="240">
+    {% endif %}
+
+</div>
+{% endblock %}

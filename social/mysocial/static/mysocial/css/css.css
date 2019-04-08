@@ -1,0 +1,284 @@
+body{
+    background-color: white;
+}
+.art{
+    display:flex;
+    flex-flow: column ;
+    /*border-right:1px solid gray;*/
+    width:10%;
+    color:white;
+    position: absolute;
+    left:0;
+    margin-left: 18%;
+    margin-top: -20px;
+
+}
+
+.author{
+    color:darkblue;
+    font-size: 15px;
+}
+
+.art a{
+    color: blue;
+    margin-left: 15px;
+}
+.content{
+    display:flex;
+    flex-flow: column ;
+    width:50%;
+    position: relative;
+    margin-left: 30%;
+    margin-top: -10px;
+    color:#4a76a8;
+
+}
+
+.content a{
+    color: #4a76a8;
+}
+
+#change{
+    margin-left:90.5%;
+    color:black;
+}
+
+
+#edit_prof{
+    color:black;
+    padding: 0;
+    margin: 0;
+}
+
+#change_pass {
+    color:black;
+    padding: 0;
+    position: absolute;
+    margin-top: 25%;
+}
+.ssilki{
+    margin-top:30px;
+    margin-left: 25px;
+    height:100%;
+}
+.ssilki a{
+    color:#4a76a8;
+    text-decoration:none;
+
+
+}
+.ssilki li{
+    margin-top:5px;
+    font-size: 17px;
+    list-style-type: none;
+}
+
+.container{
+    width: 100%;
+    height:100%;
+}
+
+.post{
+    padding: 10px;
+    border:1px solid #4a76a8;
+    margin-top: 20px;
+    border-radius: 5px;
+    color:darkblue;
+    width: 100%;
+}
+.post h1{
+    color:red;
+    font-size: 35px;
+    text-decoration: underline;
+}
+.post-form textarea, input, select{
+    color:black;
+    width:700px;
+    font-size:20px;
+}
+.post-form label {
+    font-size: 21px;
+}
+.post-form select{
+    width:100px;
+    height:30px;
+}
+.post-form textarea{
+    height:300px;
+}
+.post-form{
+    margin:auto;
+    margin-left: 20%;
+}
+
+.article{
+    font-size: 23px;
+    padding: 15px;
+    margin:0;
+}
+.top-menu{
+    margin-top: 5%;
+    font-size: 15px;
+    border:2px solid darkblue;
+    width:250px;
+    border-radius:5px;
+    padding: 15px;
+    text-decoration: none;
+    width:100%;
+
+}
+
+.h2{
+    font-size: 30px;
+}
+.img{
+    height:30%;
+}
+.header{
+	width:100%;
+	padding:10px;
+	color: white;
+	background-color: #4a76a8;
+}
+
+
+
+.header__section{
+	display:flex;
+	align-items:center;
+	background-color: #4a76a8;
+	justify-content:space-between;
+}
+
+
+
+.header__item{
+	padding:5px;
+	font-size:20px;
+	margin-left:5px;
+
+}
+.header__item a{
+    color:white;
+}
+
+
+.header__item:hover{
+	background-color:yellow;
+	border-radius:4px
+}
+.headerlogo{
+	font-size:50px;
+	font-weight: bold;
+	color: Indigo;
+}
+.headButton{
+	cursor:pointer;
+
+}
+.headerlogo:hover{
+    background-color: gold;
+}
+.headerlogo img{
+    width:15%;
+    margin-left: 7%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  min-height: calc(100vh - 80px);
+}
+
+footer{
+    margin-top: 35px;
+    background-color: #4a76a8;
+    font-size: 15px;
+    width:100%;
+    padding: 25px;
+}
+.footerp{
+    display:flex;
+    flex-flow: row wrap;
+    margin-left: 15px;
+    color:white;
+    justify-content:space-around;
+}
+
+.errorlist{
+    color:red;
+}
+.rll{
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+.pod{
+    margin-top: 15px;
+    padding: 20px;
+}
+
+.headerButton a{
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+
+.headerButton a:hover{
+    background-color: black;
+}
+
+.logo {
+    background-color: #FF4040;
+    padding: 5px;
+    border-radius: 5%;
+
+}
+
+.logi {
+    background-color: #1acd5f;
+    padding: 5px;
+    border-radius: 5%;
+
+}
+
+.regon {
+    background-color: #2ea1ff;
+    padding: 5px;
+    border-radius: 5%;
+
+}
+
+.contain{
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.margincon{
+    margin-top: 25px;
+}
+
+.profile-form textarea, input, select{
+    color:black;
+    width:700px;
+    font-size:20px;
+}
+.profile-form label {
+    font-size: 21px;
+}
+.profile-form select{
+    width:100px;
+    height:30px;
+}
+.profile-form textarea{
+    height:300px;
+}
+.profile-form{
+    margin:auto;
+    margin-left: 20%;
+}
