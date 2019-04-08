@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # 'wagtail.contrib.settings',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -68,7 +69,12 @@ TEMPLATES = [
     },
 ]
 
+
+#Было сначало так, но не работало. Поменял на нижнюю заработало
 WSGI_APPLICATION = 'social.wsgi.application'
+
+
+# WSGI_APPLICATION = 'mysocial.wsgi.application'
 
 
 # Database

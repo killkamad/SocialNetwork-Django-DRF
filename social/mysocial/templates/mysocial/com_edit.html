@@ -6,7 +6,6 @@
 
 
 {% block content %}
-
     <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
         <h2>Новый пост:</h2>
         {{ form.as_p }}

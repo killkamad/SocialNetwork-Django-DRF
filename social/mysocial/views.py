@@ -1,8 +1,11 @@
 from .models import Post
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
-from .forms import PostForm, UserRegisterForm
+from .forms import PostForm, UserRegisterForm, EditProfileForm
+from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
+from django.contrib.auth import update_session_auth_hash
 from django.shortcuts import redirect
+from django.contrib.auth.models import User
 # from django.contrib import messages
 
 
@@ -58,3 +61,60 @@ def register(request):
     else:
         form = UserRegisterForm()
     return render(request, 'mysocial/register.html', {'form': form})
+
+
+#Friendlist
+# def change_friends(request,operation,pk):
+#     friend = Friend.objects.get(current_user=request.user)
+#     friendss = friend.users.all()
+#     friend= User.Objects.get(pk=pk)
+#     if operation == 'add':
+#         Friend.make_friend(request.user, friend)
+#     elif operation == 'remove':
+#         Friend.lose_friend(request.user, friend)
+#     return render(request, 'mysocial/friend_list.html')
+
+# def change_friends(request, operation, pk):
+#     friend = User.objects.get(pk=pk)
+#     if operation == 'add':
+#         Friend.make_friend(request.user, friend)
+#     elif operation == 'remove':
+#         Friend.lose_friend(request.user, friend)
+#     return render(request, 'mysocial/friend_list.html')
+
+# Profile view
+def view_profile(request, pk=None):
+    if pk:
+        user = User.objects.get(pk=pk)
+    else:
+        user = request.user
+    args = {'user': user}
+    return render(request, 'mysocial/profile.html', args)
+
+def edit_profile(request):
+    if request.method == 'POST':
+        form = EditProfileForm(request.POST, instance=request.user)
+
+        if form.is_valid():
+            form.save()
+            return redirect(view_profile)
+    else:
+        form = EditProfileForm(instance=request.user)
+        args = {'form': form}
+        return render(request, 'mysocial/edit_profile.html', args)
+
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(data=request.POST, user=request.user)
+
+        if form.is_valid():
+            form.save()
+            update_session_auth_hash(request, form.user)
+            return redirect('view_profile')
+        else:
+            return redirect('change_password')
+    else:
+        form = PasswordChangeForm(user=request.user)
+
+        args = {'form': form}
+        return render(request, 'mysocial/change_password.html', args)
