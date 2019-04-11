@@ -38,7 +38,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'friendship',
+
+    # modules
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+    # my apps
     'mysocial',
+    'friends',
 ]
 
 MIDDLEWARE = [
@@ -52,6 +62,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'social.urls'
+
+
+SITE_ID = 1
 
 TEMPLATES = [
     {

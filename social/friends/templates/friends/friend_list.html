@@ -1,0 +1,34 @@
+{% extends '../mysocial/base.html' %}
+
+{% block head %}
+<title>Список друзей</title>
+{% endblock %}
+
+{% block content %}
+
+<h2>Friends gay</h2>
+<!--{% for friend in request.user.userprofile.followers.all %}-->
+    <!--<p>{{ friend }}</p>-->
+            <!--&lt;!&ndash;<a href="{% url 'com_detail' operation='remove' pk=friend.pk %}">&ndash;&gt;-->
+            <!--&lt;!&ndash;<button type="button" class="btn btn-default">Remove Friend</button>&ndash;&gt;-->
+            <!--&lt;!&ndash;</a>&ndash;&gt;-->
+        <!--{% endfor %}-->
+
+<ul>
+	{% for user_p in users %}
+        {% if not user_p in friends %}
+		<li><a href="{{ user_p.get_absolute_url }}">{{ user_p }}</a></li>
+	</ul>
+<ul>
+        {% else %}
+        <li>
+            <p>hshshshsh</p>
+            <a href="{{ user_p.get_absolute_url }}">{{ friends }}</a>
+        </li>
+</ul>
+        {% endif %}
+{% endfor %}
+
+
+
+{% endblock %}
