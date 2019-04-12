@@ -257,6 +257,7 @@ footer{
 .contain{
     font-size: 15px;
     margin-top: 15px;
+	color:black;
 }
 
 .margincon{
@@ -281,4 +282,24 @@ footer{
 .profile-form{
     margin:auto;
     margin-left: 20%;
+}
+
+.friend_container{
+	margin-top:10px;
+}
+
+.friend_container h2, ul{
+	color:black;
+}
+.friend_container a{
+	color:black;
+}
+.users_container{
+	color:black;
+}
+.users_container a{
+	color:black;
+}
+.contain p{
+	font-size:22px;
 }

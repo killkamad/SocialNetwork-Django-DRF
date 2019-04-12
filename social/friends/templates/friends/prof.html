@@ -1,32 +1,33 @@
 {% extends '../mysocial/base.html' %}
 
 {% block head %}
-<title>Выход из аккаунта</title>
+<title>Список друзей</title>
 {% endblock %}
 
 {% block content %}
-<div class="container text-center">
-	<span><a href="/users/">Home</a></span>
+<div class="friend_container">
+	<h3><span><a style="text-decoration:underline;" href="/users/">Люди в социальной сети</a></span></h3>
 
 	{% if request.user == u %}
 
-		<h1>Friends</h1>
-
-		{% for friend in friends_list %}
-			<a href="{{ friend.user.profile.get_absolute_url }}">{{ friend.user.username }}</a>
-		{% endfor %}
-		<hr>
-		<h2>Sent Friend requests</h2>
+		<h2 style="">Друзья</h1>
 		<ul>
-		{% for s_request in sent_friend_requests %}
-			<li>{{ s_request.to_user.username }}</li>
+		{% for friend in friends_list %}
+			<li style="font-size: 25px;"><a style="font-size: 25px;" href="{{ friend.user.profile.get_absolute_url }}">{{ friend.user.username }}</a></li>
 		{% endfor %}
 		</ul>
 		<hr>
-		<h2>Received Friend requests</h2>
+		<h2>Отплавленные запросы</h2>
+		<ul>
+		{% for s_request in sent_friend_requests %}
+			<li style="font-size: 25px;">{{ s_request.to_user.username }}</li>
+		{% endfor %}
+		</ul>
+		<hr>
+		<h2>Полученные запросы</h2>
 
 		{% for r_request in rec_friend_requests %}
-			<p><a href="{{ r_request.from_user.profile.get_absolute_url }}">{{ r_request.from_user.username }}</a></p>
+			<p><a style="font-size: 25px;" href="{{ r_request.from_user.profile.get_absolute_url }}">{{ r_request.from_user.username }}</a></p>
 			<small><a class='btn btn-primary' href="/users/friend-request/accept/{{ r_request.from_user.id }}">Accept</a></small>
 			<small><a class='btn btn-warning' href="/users/friend-request/delete/{{ r_request.from_user.id }}">Ignore</a></small>
 		{% endfor %}
