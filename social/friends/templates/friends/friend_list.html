@@ -1,36 +1,47 @@
 {% extends '../mysocial/base.html' %}
 
 {% block head %}
-<title>Список пользователей</title>
+<title>Список друзей</title>
 {% endblock %}
 
 {% block content %}
-<div class="users_container">
-<h1>Список пользователей:</h1>
-<!--{% for friend in request.user.userprofile.followers.all %}-->
-    <!--<p>{{ friend }}</p>-->
-            <!--&lt;!&ndash;<a href="{% url 'com_detail' operation='remove' pk=friend.pk %}">&ndash;&gt;-->
-            <!--&lt;!&ndash;<button type="button" class="btn btn-default">Remove Friend</button>&ndash;&gt;-->
-            <!--&lt;!&ndash;</a>&ndash;&gt;-->
-        <!--{% endfor %}-->
+<div class="friend_container border">
+	<h3><span><a style="text-decoration:underline;" href="/users/">Люди в социальной сети:</a></span></h3>
 
-<ul>
-	{% for user_p in users %}
-        {% if not user_p in friends %}
-		<li style="font-size: 25px;">
-			<a href="{{ user_p.get_absolute_url }}">{{ user_p }}</a>
-		</li>
-</ul>
-<ul>
-        {% else %}
-        <li>
-            <p>hshshshsh</p>
-            <a href="{{ user_p.get_absolute_url }}">{{ friends }}</a>
-        </li>
-</ul>
-        {% endif %}
-{% endfor %}
+	{% if request.user == u %}
+
+		<h2 style="color:#00b900;">Друзья:</h2>
+		<ul style="color:#00b900;">
+		{% for friend in friends_list %}
+			<li style="font-size: 25px; "><a style="font-size: 25px; color:#00b900;" href="{{ friend.user.profile.get_absolute_url }}">{{ friend.user.username }}</a></li>
+		{% endfor %}
+		</ul>
+		<hr>
+		<h2 style="color:#df8b00;">Отплавленные запросы:</h2>
+		<ul style="color:#df8b00;">
+		{% for s_request in sent_friend_requests %}
+			<li style="font-size: 25px;color:#df8b00;">{{ s_request.to_user.username }}</li>
+		{% endfor %}
+		</ul>
+		<hr>
+		<h2 style="color:#0660d2">Полученные запросы:</h2>
+
+		{% for r_request in rec_friend_requests %}
+			<p><a style="font-size: 25px;" href="{{ r_request.from_user.profile.get_absolute_url }}">{{ r_request.from_user.username }}</a></p>
+			<small><a class='btn btn-primary' href="/users/friend-request/accept/{{ r_request.from_user.id }}">Accept</a></small>
+			<small><a class='btn btn-warning' href="/users/friend-request/delete/{{ r_request.from_user.id }}">Ignore</a></small>
+		{% endfor %}
 
 
-</div>
+	{% else %}
+
+		{% if button_status == 'not_friend' %}
+			<small><a class='btn btn-primary' href="/users/friend-request/send/{{ u.id }}">Add Friend</a></small>
+		{% elif button_status == 'friend_request_sent' %}
+			<small><a class="btn btn-warning" href="/users/friend-request/cancel/{{ u.id }}">Cancel Request</a></small>
+		{% endif %}
+
+	{% endif %}
+
+	</div>
 {% endblock %}

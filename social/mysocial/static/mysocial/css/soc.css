@@ -177,7 +177,7 @@ body{
 
 }
 .headerlogo:hover{
-    background-color: gold;
+    background-color: #ada209;
 }
 .headerlogo img{
     width:15%;
@@ -258,6 +258,7 @@ footer{
     font-size: 15px;
     margin-top: 15px;
 	color:black;
+    padding: 30px;
 }
 
 .margincon{
@@ -285,7 +286,12 @@ footer{
 }
 
 .friend_container{
-	margin-top:10px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 50px;
+	margin-top:20px;
+    height: 100%;
 }
 
 .friend_container h2, ul{
@@ -295,11 +301,30 @@ footer{
 	color:black;
 }
 .users_container{
+    margin-top: 20px;
 	color:black;
+    padding: 50px;
+    height: 100%;
 }
 .users_container a{
 	color:black;
 }
 .contain p{
 	font-size:22px;
+}
+
+.are_logged{
+    font-size: 16px;
+}
+.are_logged_right{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.border{
+    border-style: solid;
+    border-width: thin;
+    border-color:gray;
+    border-radius: 1.5%;
+
 }

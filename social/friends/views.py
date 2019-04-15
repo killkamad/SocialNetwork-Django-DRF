@@ -12,7 +12,7 @@ def users_list(request):
 	context = {
 		'users': users
 	}
-	return render(request, "friends/friend_list.html", context)
+	return render(request, "friends/user_list.html", context)
 
 def send_friend_request(request, id):
 	if request.user.is_authenticated:
@@ -73,4 +73,4 @@ def profile_view(request, slug):
 		'rec_friend_requests': rec_friend_requests
 	}
 
-	return render(request, "friends/prof.html", context)
+	return render(request, "friends/friend_list.html", context)

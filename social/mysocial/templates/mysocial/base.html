@@ -7,18 +7,21 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'mysocial/css/css.css' %}">
+        <link rel="stylesheet" href="{% static 'mysocial/css/soc.css' %}">
     </head>
     <body>
     <header>
         <div class="header">
         <div class="header__section">
             <div class="header__item headerlogo">
-                <a href="/"><img class="Imag" src="{% static 'mysocial/Images/rofl1.png' %}"></a>
+                <!--<a href="/"><img class="Imag" src="{% static 'mysocial/Images/rofl1.png' %}"></a>-->
+                <a style="text-decoration: none" href="/"><span style="color:#fff12d;">Nursultan</span>Network</a>
             </div>
+
 				<div class="headerButton">
                     {% if user.is_authenticated %}
                     <div class="headerButton">
+                        <p class="are_logged">Вы вошли как, <span class="are_logged_right">{{ user.get_username }}</span>
                     <a class='logo' href="/logout">Выйти</a>
                     {% else %}
                     <a class='logi' href="/login">Войти</a>
