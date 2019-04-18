@@ -4,6 +4,7 @@ colorama==0.4.1
 defusedxml==0.5.0
 Django==2.2
 django-allauth==0.39.1
+django-crispy-forms==1.7.2
 django-friendship==1.8.0
 djangorestframework==3.9.2
 httpie==1.0.2
