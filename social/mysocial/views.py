@@ -6,7 +6,7 @@ from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
 from django.shortcuts import redirect
 from django.contrib.auth.models import User
-# from django.contrib import messages
+from django.contrib import messages
 
 
 
@@ -27,6 +27,7 @@ def com_new(request):
             post.author = request.user
             post.published_date = timezone.now()
             post.save()
+            messages.success(request, f'Вы добавили новую публикацию')
             return redirect('com_detail', pk=post.pk)
     else:
         form = PostForm()
@@ -42,6 +43,7 @@ def com_edit(request, pk):
             post.author = request.user
             post.published_date = timezone.now()
             post.save()
+            messages.success(request, f'Yes yes')
             return redirect('com_detail', pk=post.pk)
     else:
         form = PostForm(instance=post)
@@ -56,7 +58,7 @@ def register(request):
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
-            # messages.success(request, f'Вы зарегестрировались как {username} и можете войти в свой аккаунт!')
+            messages.success(request, f'Вы зарегестрировались как {username} и можете войти в свой аккаунт!')
             return redirect('login')
     else:
         form = UserRegisterForm()

@@ -16,8 +16,8 @@
                          {% if post.image %}
                             <img src='{{ post.image.url }}' class='img' />
                          {% endif %}
-        {% if user.is_authenticated %}
-            <a class="btn btn-default" id="change" href="{% url 'com_edit' pk=post.pk %}">Изменить</a>
+        {% if post.author == user %}
+            <a class="change" id="edit_prof" href="{% url 'com_edit' pk=post.pk %}">Изменить</a>
         {% endif %}
                     </div>
                 {% endfor %}

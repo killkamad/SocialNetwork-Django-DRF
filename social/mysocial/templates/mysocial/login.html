@@ -1,5 +1,5 @@
 {% extends 'mysocial/base.html' %}
-
+{% load crispy_forms_tags %}
 {% block head %}
 <title>Регистрация</title>
 {% endblock %}
@@ -8,11 +8,9 @@
 
     <form method="POST" class="post-form">{% csrf_token %}
         <h1>Войдите в аккаунт</h1>
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Войти</button>
-        <p class="pod">
-        Нету аккаунта? <a class="rll" href="{% url 'register' %}">Зарегистрироваться</a>
-        </p>
+        {{ form|crispy }}
+        <button type="submit" id="edit_prof" style="font-size: 15px;width: 10%">Войти</button>
+        <a class="logi" href="{% url 'register' %}">Регистрация</a>
     </form>
     <div>
 

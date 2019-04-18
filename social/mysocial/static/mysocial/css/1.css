@@ -30,7 +30,6 @@ body{
     position: relative;
     margin-left: 30%;
     margin-top: -10px;
-    color:#4a76a8;
 
 }
 
@@ -38,24 +37,15 @@ body{
     color: #4a76a8;
 }
 
-#change{
+.change{
     margin-left:90.5%;
     color:black;
 }
 
 
-#edit_prof{
-    color:black;
-    padding: 0;
-    margin: 0;
-}
 
-#change_pass {
-    color:black;
-    padding: 0;
-    position: absolute;
-    margin-top: 25%;
-}
+
+
 .ssilki{
     margin-top:30px;
     margin-left: 25px;
@@ -91,10 +81,12 @@ body{
     font-size: 35px;
     text-decoration: underline;
 }
-.post-form textarea, input, select{
-    color:black;
-    width:700px;
+.post-form textarea{
+    width:500px;
     font-size:20px;
+}
+.post-form input{
+    width: 500px;
 }
 .post-form label {
     font-size: 21px;
@@ -104,11 +96,14 @@ body{
     height:30px;
 }
 .post-form textarea{
-    height:300px;
+    height:100px;
 }
 .post-form{
-    margin:auto;
     margin-left: 20%;
+}
+.post-form a{
+    text-decoration: none;
+    color:#1acd5f;
 }
 
 .article{
@@ -179,10 +174,10 @@ body{
 .headerlogo:hover{
     background-color: #ada209;
 }
-.headerlogo img{
-    width:15%;
-    margin-left: 7%;
-}
+/*.headerlogo img{*/
+    /*width:15%;*/
+    /*margin-left: 17%;*/
+/*}*/
 
 * {
   margin: 0;
@@ -223,35 +218,80 @@ footer{
 
 .headerButton a{
     text-decoration: none;
-    color:white;
     font-size: 20px;
-    margin-left: 20px;
+    margin-left: 5px;
 }
 
 
-.headerButton a:hover{
-    background-color: black;
-}
 
 .logo {
-    background-color: #FF4040;
-    padding: 5px;
+    /*background-color: #FF4040;*/
+    color:#FF4040;
+    padding: 7px;
     border-radius: 5%;
+    border:2px solid #FF4040;
 
+}
+.logo:hover{
+    color:white;
+    background-color: #FF4040;
 }
 
 .logi {
-    background-color: #1acd5f;
-    padding: 5px;
+    color:#1acd5f;
+    /*background-color: #1acd5f;*/
+    padding: 7px;
     border-radius: 5%;
+    border:2px solid #1acd5f;
 
 }
 
+.logi:hover{
+    color:white;
+    background-color: #1acd5f;
+}
+
 .regon {
+    color:#2ea1ff;
+    /*background-color: #2ea1ff;*/
+    padding: 7px;
+    border-radius: 5%;
+    border:2px solid #2ea1ff;
+}
+
+.regon:hover{
+    color:white;
     background-color: #2ea1ff;
+}
+
+#edit_prof{
+    color:#4a76a8;
+    background-color: white;
     padding: 5px;
     border-radius: 5%;
+    border:2px solid #4a76a8;
+    text-decoration: none;
+    margin-top:10px;
 
+}
+
+#edit_prof:hover{
+    color:white;
+    background-color: #4a76a8;
+}
+
+#change_pass {
+    color:#4a76a8;
+    /*background-color: #2ea1ff;*/
+    padding: 5px;
+    border-radius: 5%;
+    border:2px solid #4a76a8;
+    text-decoration: none;
+}
+
+#change_pass:hover{
+    color:white;
+    background-color: #4a76a8;
 }
 
 .contain{
@@ -304,7 +344,6 @@ footer{
     margin-top: 20px;
 	color:black;
     padding: 50px;
-    height: 100%;
 }
 .users_container a{
 	color:black;

@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     # 'wagtail.contrib.settings',
+    # 'mysocial.apps.MysocialConfig',
+    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -152,3 +154,5 @@ MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn")
 
 LOGIN_REDIRECT_URL='com_list'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

@@ -1,5 +1,5 @@
 {% extends 'mysocial/base.html' %}
-
+{% load crispy_forms_tags %}
 {% block head %}
 <title>Изменить Профиль</title>
 {% endblock %}
@@ -7,13 +7,14 @@
 
 {% block content %}
 <div class="contain margincon">
-    {% if user.is_authenticated %}
-        <a class="btn btn-default" id="change_pass" href="{% url 'change_password'%}">Изменить пароль</a>
-    {% endif %}
+
     <form class="profile-form" method="post">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Сохранить</button>
+        {{ form|crispy }}
+        <button id="edit_prof" type="submit">Сохранить</button>
+        {% if user.is_authenticated %}
+        <a id="change_pass" href="{% url 'change_password'%}">Изменить пароль</a>
+    {% endif %}
     </form>
     <br>
 
