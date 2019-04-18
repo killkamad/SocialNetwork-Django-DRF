@@ -43,7 +43,7 @@ def com_edit(request, pk):
             post.author = request.user
             post.published_date = timezone.now()
             post.save()
-            messages.success(request, f'Yes yes')
+            messages.success(request, f'Вы изменили публикацию')
             return redirect('com_detail', pk=post.pk)
     else:
         form = PostForm(instance=post)
