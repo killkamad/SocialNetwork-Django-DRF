@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bdec3f8-3b77-41b8-9f68-da4c2f04e4bf" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/social/mysocial/static/mysocial/Images/icon1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/social/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/social/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social/friends/templates/friends/friend_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/social/friends/templates/friends/friend_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social/mysocial/templates/mysocial/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/social/mysocial/templates/mysocial/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social/mysocial/templates/mysocial/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/social/mysocial/templates/mysocial/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social/mysocial/static/mysocial/Images/rofl1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social/mysocial/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/social/mysocial/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,7 +19,7 @@
         <entry file="file://$PROJECT_DIR$/social/mysocial/templates/mysocial/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
-              <caret line="24" column="91" lean-forward="true" selection-start-line="24" selection-start-column="91" selection-end-line="24" selection-end-column="114" />
+              <caret line="24" column="91" selection-start-line="24" selection-start-column="91" selection-end-line="24" selection-end-column="114" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -33,32 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="com_list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/social/mysocial/templates/mysocial/com_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logout.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/social/mysocial/templates/mysocial/logout.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="13" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/social/mysocial/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+            <state relative-caret-position="-2899">
+              <caret line="60" column="111" lean-forward="true" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="111" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -66,16 +42,25 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/social/social/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="css.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/social/mysocial/static/mysocial/css/css.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="47">
+            <state relative-caret-position="1160">
               <caret line="58" column="25" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="friend_list.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="friend_list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/social/friends/templates/friends/friend_list.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
@@ -96,8 +81,11 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/social/friends/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="75" column="63" lean-forward="true" selection-start-line="75" selection-start-column="63" selection-end-line="75" selection-end-column="63" />
+            <state relative-caret-position="501">
+              <caret line="75" column="63" selection-start-line="75" selection-start-column="63" selection-end-line="75" selection-end-column="63" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/social/mysocial/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="100">
-              <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+              <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -161,7 +149,6 @@
       <find>margin-left</find>
       <find>contain</find>
       <find>reg</find>
-      <find>messages</find>
       <find>cont</find>
       <find>conte</find>
       <find>post</find>
@@ -177,6 +164,7 @@
       <find>edit</find>
       <find>hover</find>
       <find>header</find>
+      <find>messages</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -196,7 +184,6 @@
         <option value="$PROJECT_DIR$/social/mysocial/static/mysocial/css/soc.css" />
         <option value="$PROJECT_DIR$/social/mysocial/signals.py" />
         <option value="$PROJECT_DIR$/social/friends/signals.py" />
-        <option value="$PROJECT_DIR$/social/social/urls.py" />
         <option value="$PROJECT_DIR$/social/friends/urls.py" />
         <option value="$PROJECT_DIR$/social/friends/views.py" />
         <option value="$PROJECT_DIR$/social/friends/models.py" />
@@ -217,12 +204,13 @@
         <option value="$PROJECT_DIR$/social/mysocial/templates/mysocial/edit_profile.html" />
         <option value="$PROJECT_DIR$/social/mysocial/templates/mysocial/com_edit.html" />
         <option value="$PROJECT_DIR$/social/mysocial/static/mysocial/css/1.css" />
-        <option value="$PROJECT_DIR$/social/mysocial/views.py" />
         <option value="$PROJECT_DIR$/social/mysocial/templates/mysocial/com_list.html" />
         <option value="$PROJECT_DIR$/social/mysocial/static/mysocial/css/css.css" />
         <option value="$PROJECT_DIR$/social/mysocial/templates/mysocial/base.html" />
         <option value="$PROJECT_DIR$/social/mysocial/templates/mysocial/profile.html" />
         <option value="$PROJECT_DIR$/social/friends/templates/friends/friend_list.html" />
+        <option value="$PROJECT_DIR$/social/mysocial/views.py" />
+        <option value="$PROJECT_DIR$/social/social/urls.py" />
       </list>
     </option>
   </component>
@@ -417,8 +405,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32897604" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2803838" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.17102396" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2835821" />
       <window_info anchor="right" id="R Packages" order="3" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="R Graphics" order="3" />
@@ -436,11 +424,10 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.29847494" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -449,16 +436,17 @@
       <window_info anchor="right" id="R Graphics" order="4" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="right" id="R Packages" order="5" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,34 +460,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="added my page" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/social/mysocial/templates/mysocial/edit_profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="45" lean-forward="true" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/social/mysocial/templates/mysocial/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" selection-start-line="9" selection-end-line="11" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/social/mysocial/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/social/mysocial/templates/mysocial/com_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/social/mysocial/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -585,13 +545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="18" selection-start-line="18" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/social/social/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -725,16 +678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/social/mysocial/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/social/mysocial/templates/mysocial/com_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
@@ -747,7 +690,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/social/mysocial/static/mysocial/css/css.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
+        <state relative-caret-position="1160">
           <caret line="58" column="25" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
         </state>
       </provider>
@@ -755,29 +698,12 @@
     <entry file="file://$PROJECT_DIR$/social/mysocial/templates/mysocial/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
-          <caret line="24" column="91" lean-forward="true" selection-start-line="24" selection-start-column="91" selection-end-line="24" selection-end-column="114" />
+          <caret line="24" column="91" selection-start-line="24" selection-start-column="91" selection-end-line="24" selection-end-column="114" />
           <folding>
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#a#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/social/friends/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="75" column="63" lean-forward="true" selection-start-line="75" selection-start-column="63" selection-end-line="75" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/social/mysocial/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -811,6 +737,207 @@
             <element signature="n#style#0;n#ul#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#li#0;n#ul#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/friends/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="75" column="63" selection-start-line="75" selection-start-column="63" selection-end-line="75" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/mysocial/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2899">
+          <caret line="60" column="111" lean-forward="true" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="111" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://Python/#F:/University/Programming/GitHub/SocSet/social/social/urls.py">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Python</ID>
+          <OriginalElement>#F:/University/Programming/GitHub/SocSet/social/social/urls.py</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="672.0" y="282.0" />
+          <SelectedNodes />
+          <Categories />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/social/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://Python/social.mysocial.models.Post">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Python</ID>
+          <OriginalElement>social.mysocial.models.Post</OriginalElement>
+          <nodes>
+            <node x="" y="">social.mysocial.models.Post</node>
+            <node x="" y="">django.db.models.base.ModelBase</node>
+            <node x="" y="">object</node>
+            <node x="" y="">django.db.models.base.Model</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="150.5" y="93.5" />
+          <SelectedNodes />
+          <Categories />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://Python/#F:/University/Programming/GitHub/SocSet/social/mysocial/models.py">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Python</ID>
+          <OriginalElement>#F:/University/Programming/GitHub/SocSet/social/mysocial/models.py</OriginalElement>
+          <nodes>
+            <node x="" y="">social.mysocial.models.Post</node>
+            <node x="" y="">django.db.models.base.ModelBase</node>
+            <node x="" y="">object</node>
+            <node x="" y="">django.db.models.base.Model</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="150.5" y="93.5" />
+          <SelectedNodes />
+          <Categories />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram/F:/University/Programming/GitHub/SocSet">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$</OriginalElement>
+          <nodes>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/rest_framework/templates/rest_framework/admin.html</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/allauth/socialaccount/providers/persona/templates/persona/auth.html</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/django/contrib/admin/static/admin/css/base.css</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/django/contrib/admin/templates/admin/base.html</node>
+            <node x="" y="">$PROJECT_DIR$/social/mysocial/templates/mysocial/base.html</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/rest_framework/templates/rest_framework/base.html</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/django/contrib/admin/templates/admin/change_form.html</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/django/contrib/admin/templates/admin/change_list.html</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/django/contrib/admin/templates/admin/auth/user/change_password.html</node>
+            <node x="" y="">$PROJECT_DIR$/social/mysocial/templates/mysocial/com_detail.html</node>
+            <node x="" y="">$PROJECT_DIR$/social/mysocial/templates/mysocial/com_list.html</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/rest_framework/static/rest_framework/js/coreapi-0.1.1.js##44426;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/rest_framework/static/rest_framework/js/coreapi-0.1.1.js#URL#23095;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/rest_framework/static/rest_framework/js/coreapi-0.1.1.js#auth#21647;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/rest_framework/static/rest_framework/js/coreapi-0.1.1.js#basic#2326;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/rest_framework/static/rest_framework/js/coreapi-0.1.1.js#client#21677;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/rest_framework/static/rest_framework/js/coreapi-0.1.1.js#codecs#21711;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/rest_framework/static/rest_framework/js/coreapi-0.1.1.js#corejson#14424;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/rest_framework/static/rest_framework/js/coreapi-0.1.1.js#document#7043;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/rest_framework/static/rest_framework/js/coreapi-0.1.1.js#errors#21783;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/rest_framework/static/rest_framework/js/coreapi-0.1.1.js#fetch#22986;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/rest_framework/static/rest_framework/js/coreapi-0.1.1.js#http#28340;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/rest_framework/static/rest_framework/js/coreapi-0.1.1.js#json#14462;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/rest_framework/static/rest_framework/js/coreapi-0.1.1.js#lolcation#33455;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/rest_framework/static/rest_framework/js/coreapi-0.1.1.js#qs#33494;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/rest_framework/static/rest_framework/js/coreapi-0.1.1.js#required#33415;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/rest_framework/static/rest_framework/js/coreapi-0.1.1.js#session#2358;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/rest_framework/static/rest_framework/js/coreapi-0.1.1.js#text#14492;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/rest_framework/static/rest_framework/js/coreapi-0.1.1.js#token#2394;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/rest_framework/static/rest_framework/js/coreapi-0.1.1.js#transports#7149;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/rest_framework/static/rest_framework/js/coreapi-0.1.1.js#urlTemplate#23127;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/rest_framework/static/rest_framework/js/coreapi-0.1.1.js#utils#3421;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/rest_framework/static/rest_framework/js/coreapi-0.1.1.js#whatwg-fetch#31124;</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/django/views/templates/default_urlconf.html</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/django/contrib/admin/templates/admin/delete_confirmation.html</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/django/contrib/admin/templates/admin/delete_selected_confirmation.html</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/rest_framework/templates/rest_framework/docs/error.html</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/allauth/socialaccount/providers/facebook/templates/facebook/fbconnect.html</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/django/contrib/admin/static/admin/css/fonts.css</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/django/contrib/admin/static/admin/css/forms.css</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/rest_framework/templates/rest_framework/docs/index.html</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/django/contrib/admin/templates/admin/index.html</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/rest_framework/templates/rest_framework/docs/langs/javascript-intro.html</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/django/contrib/admin/templates/admin/login.html</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/django/contrib/admin/templates/registration/password_change_form.html</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/django/contrib/admin/templates/registration/password_reset_confirm.html</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/django/contrib/admin/templates/registration/password_reset_form.html</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/django/contrib/admin/templates/admin/popup_response.html</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/django/contrib/admin/templates/admin/prepopulated_fields_js.html</node>
+            <node x="" y="">$PROJECT_DIR$/social/mysocial/templates/mysocial/profile.html</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/django/contrib/admin/templates/admin/widgets/related_widget_wrapper.html</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/django/contrib/admin/templates/admin/search_form.html</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/select2.full.js#ContainerCSS#115940;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/select2.full.js#DropdownCSS#114705;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/select2.full.js#InitSelection#113136;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/select2.full.js#InputCompat#121371;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/select2.full.js#Query#112916;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/select2.full.js#jquery#381;F:/University/Programming/GitHub/SocSet/myvenv/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/select2.full.js#translations#57785;</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/select2.full.min.js#jquery#179;</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/django/contrib/admin/templates/admin/edit_inline/tabular.html</node>
+            <node x="" y="">$PROJECT_DIR$/myvenv/Lib/site-packages/django/contrib/admin/static/admin/css/widgets.css</node>
+            <node x="" y="" />
+            <node x="" y="">//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css</node>
+            <node x="" y="">//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css</node>
+            <node x="" y="">/static/admin/css/fonts.css</node>
+            <node x="" y="">auth</node>
+            <node x="" y="">basic</node>
+            <node x="" y="">client</node>
+            <node x="" y="">codecs</node>
+            <node x="" y="">compat/containerCss</node>
+            <node x="" y="">compat/dropdownCss</node>
+            <node x="" y="">compat/initSelection</node>
+            <node x="" y="">compat/inputData</node>
+            <node x="" y="">compat/query</node>
+            <node x="" y="">corejson</node>
+            <node x="" y="">document</node>
+            <node x="" y="">errors</node>
+            <node x="" y="">http</node>
+            <node x="" y="">https://login.persona.org/include.js</node>
+            <node x="" y="">isomorphic-fetch</node>
+            <node x="" y="">jquery</node>
+            <node x="" y="">json</node>
+            <node x="" y="">lolcation</node>
+            <node x="" y="">path</node>
+            <node x="" y="">querystringify</node>
+            <node x="" y="">requires-port</node>
+            <node x="" y="">session</node>
+            <node x="" y="">text</node>
+            <node x="" y="">token</node>
+            <node x="" y="">transports</node>
+            <node x="" y="">url-parse</node>
+            <node x="" y="">url-template</node>
+            <node x="" y="">utils</node>
+            <node x="" y="">whatwg-fetch</node>
+            <node x="" y="">{% block stylesheet %}{% static</node>
+            <node x="" y="">{% block stylesheet_rtl %}{% static</node>
+            <node x="" y="">{% static</node>
+            <node x="" y="">{% static 'admin/img/icon-addlink.svg' %}</node>
+            <node x="" y="">{% static 'admin/img/icon-changelink.svg' %}</node>
+            <node x="" y="">{% static 'admin/img/icon-deletelink.svg' %}</node>
+            <node x="" y="">{% static 'admin/js/cancel.js' %}</node>
+            <node x="" y="">{% static 'admin/js/change_form.js' %}</node>
+            <node x="" y="">{% static 'facebook/js/fbconnect.js' %}</node>
+            <node x="" y="">{% static 'mysocial/Images/kz.png' %}</node>
+            <node x="" y="">{% static 'mysocial/css/css.css' %}</node>
+            <node x="" y="">{% static 'rest_framework/css/bootstrap-theme.min.css' %}</node>
+            <node x="" y="">{% static 'rest_framework/css/bootstrap.min.css' %}</node>
+            <node x="" y="">{% static 'rest_framework/css/font-awesome-4.0.3.css' %}</node>
+            <node x="" y="">{% static 'rest_framework/docs/css/base.css' %}</node>
+            <node x="" y="">{% static 'rest_framework/docs/css/jquery.json-view.min.css' %}</node>
+            <node x="" y="">{% static 'rest_framework/docs/img/favicon.ico' %}</node>
+            <node x="" y="">{% static 'rest_framework/docs/js/api.js' %}</node>
+            <node x="" y="">{% static 'rest_framework/docs/js/jquery.json-view.min.js' %}</node>
+            <node x="" y="">{% static 'rest_framework/js/bootstrap.min.js' %}</node>
+            <node x="" y="">{% static 'rest_framework/js/coreapi-0.1.1.js' %}</node>
+            <node x="" y="">{% static 'rest_framework/js/jquery-3.3.1.min.js' %}</node>
+            <node x="" y="">{% url 'admin:jsi18n' %}</node>
+            <node x="" y="">{% url 'api-docs:schema-js' %}</node>
+            <node x="" y="">{{ post.image.url }}</node>
+            <node x="" y="">{{ user.userprofile.image.url }}</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.5" x="1287.0119023992634" y="466.05079748160915" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social/mysocial/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
