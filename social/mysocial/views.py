@@ -27,7 +27,7 @@ def com_new(request):
             post.author = request.user
             post.published_date = timezone.now()
             post.save()
-            messages.success(request, f'Вы добавили новую публикацию')
+            # messages.success(request, f'Вы добавили новую публикацию')
             return redirect('com_detail', pk=post.pk)
     else:
         form = PostForm()
@@ -43,7 +43,7 @@ def com_edit(request, pk):
             post.author = request.user
             post.published_date = timezone.now()
             post.save()
-            messages.success(request, f'Вы изменили публикацию')
+            # messages.success(request, f'Вы изменили публикацию')
             return redirect('com_detail', pk=post.pk)
     else:
         form = PostForm(instance=post)
@@ -58,7 +58,7 @@ def register(request):
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
-            messages.success(request, f'Вы зарегестрировались как {username} и можете войти в свой аккаунт!')
+            # messages.success(request, f'Вы зарегестрировались как {username} и можете войти в свой аккаунт!')
             return redirect('login')
     else:
         form = UserRegisterForm()
