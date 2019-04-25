@@ -9,7 +9,7 @@
     <form method="POST" class="post-form">{% csrf_token %}
         <h1>Войдите в аккаунт</h1>
         {{ form|crispy }}
-        <button type="submit" id="edit_prof" style="font-size: 15px;width: 10%">Войти</button>
+        <button type="submit" id="edit_prof" style="font-size: 15px;">Войти</button>
         <a class="logi" href="{% url 'register' %}">Регистрация</a>
     </form>
     <div>

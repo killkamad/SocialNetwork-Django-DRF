@@ -26,10 +26,10 @@ body{
 .content{
     display:flex;
     flex-flow: column ;
-    width:50%;
+    width:30%;
     position: relative;
-    margin-left: 30%;
-    margin-top: -10px;
+    margin: auto;
+    /*margin-top: -10px;*/
 
 }
 
@@ -136,7 +136,8 @@ body{
     font-size: 30px;
 }
 .img{
-    height:30%;
+    width:100%;
+    padding: 0;
 }
 .header{
 	width:100%;
@@ -168,8 +169,7 @@ body{
 
 
 .header__item:hover{
-	background-color:yellow;
-	border-radius:4px
+    color: white;
 }
 .headerlogo{
 	font-size:50px;
@@ -179,9 +179,6 @@ body{
 .headButton{
 	cursor:pointer;
 
-}
-.headerlogo:hover{
-    background-color: #7BA5D3;
 }
 /*.headerlogo img{*/
     /*width:15%;*/
@@ -375,4 +372,35 @@ footer{
     border-color:gray;
     border-radius: 1.5%;
 
+}
+
+.puding{
+    padding: 10px;
+}
+
+.finger{
+    font-size: 25px;
+    background-color: white;
+}
+
+.votes{
+    display: flex;
+    padding: 5px;
+    align-items: baseline;
+}
+
+.Nur{
+    color:#18406D;
+}
+
+.Net{
+    color:#92B1D3;
+}
+
+.Nur:hover{
+    color:white;
+}
+
+.Net:hover{
+    color:white;
 }

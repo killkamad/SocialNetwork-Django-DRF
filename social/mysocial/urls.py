@@ -17,16 +17,10 @@ urlpatterns = [
 
 ]
 
-# urlpatterns += [
-#
-#     url(r'^connect/(?P<operation>.+)/(?P<pk>\d+)/$', views.change_friends, name='change_friends')
-# ]
+from rest_framework.routers import DefaultRouter
+from .views import PostViewSet
 
-# urlpatterns+= [
-#     url(r'^$', views.users_list, name='list'),
-#     url(r'^(?P<slug>[\w-]+)/$', views.profile_view),
-#     url(r'^friend-request/send/(?P<id>[\w-]+)/$', views.send_friend_request),
-#     url(r'^friend-request/cancel/(?P<id>[\w-]+)/$', views.cancel_friend_request),
-#     url(r'^friend-request/accept/(?P<id>[\w-]+)/$', views.accept_friend_request),
-#     url(r'^friend-request/delete/(?P<id>[\w-]+)/$', views.delete_friend_request),
-# ]
+router = DefaultRouter()
+router.register(r'posts', PostViewSet)
+
+urlpatterns+=router.urls

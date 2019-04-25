@@ -1,4 +1,4 @@
-from .models import Post
+from .models import Post, Like
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm, UserRegisterForm, EditProfileForm
@@ -8,6 +8,12 @@ from django.shortcuts import redirect
 from django.contrib.auth.models import User
 from django.contrib import messages
 
+from django.contrib.auth import get_user_model
+from django.contrib.contenttypes.models import ContentType
+from rest_framework import viewsets
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from .serializers import PostSerializer
+from .mixins import LikedMixin
 
 
 # Создание постов, изменение, просмотр
@@ -121,107 +127,40 @@ def change_password(request):
         args = {'form': form}
         return render(request, 'mysocial/change_password.html', args)
 
-#Friendlist
+#Лайки
 
-# from django.shortcuts import render, get_object_or_404, redirect
-# from .models import UserProfile
-# from django.contrib.auth.models import User
-# from .models import Friend
-# from django.contrib.auth.decorators import login_required
-# #
-# # @login_required
-# # def add_or_remove_friends(request, username, verb):
-# #     n_f = get_object_or_404(User, username=username)
-# #     owner = request.user.userprofile
-# #     new_friend = UserProfile.objects.get(user=n_f)
-# #
-# #     if verb == "add":
-# #         new_friend.followers.add(owner)
-# #         Friend.make_friend(owner, new_friend)
-# #     else:
-# #         new_friend.followers.remove(owner)
-# #         Friend.remove_friend(owner, new_friend)
-# #
-# #     return redirect(new_friend.get_absolute_url())
-# #
-# # def list_friends(request):
-# #     friend_object, created = Friend.objects.get_or_create(current_user=request.user.userprofile)
-# #     friends = [friend for friend in friend_object.users.all() if friend != request.user.userprofile]
-# #     return render(request, 'friend_list.html', {"friends":friends})
+User = get_user_model()
+def add_like(obj, user):
+    """Лайкает `obj`.
+    """
+    obj_type = ContentType.objects.get_for_model(obj)
+    like, is_created = Like.objects.get_or_create(
+        content_type=obj_type, object_id=obj.id, user=user)
+    return like
+def remove_like(obj, user):
+    """Удаляет лайк с `obj`.
+    """
+    obj_type = ContentType.objects.get_for_model(obj)
+    Like.objects.filter(
+        content_type=obj_type, object_id=obj.id, user=user
+    ).delete()
+def is_fan(obj, user) -> bool:
+    """Проверяет, лайкнул ли `user` `obj`.
+    """
+    if not user.is_authenticated:
+        return False
+    obj_type = ContentType.objects.get_for_model(obj)
+    likes = Like.objects.filter(
+        content_type=obj_type, object_id=obj.id, user=user)
+    return likes.exists()
+def get_fans(obj):
+    """Получает всех пользователей, которые лайкнули `obj`.
+    """
+    obj_type = ContentType.objects.get_for_model(obj)
+    return User.objects.filter(
+        likes__content_type=obj_type, likes__object_id=obj.id)
 
-# from django.conf import settings
-# from django.contrib.auth import get_user_model
-# from django.http import HttpResponseRedirect
-# from django.shortcuts import render, get_object_or_404
-#
-# from .models import Profile, FriendRequest
-#
-# User = get_user_model()
-#
-# def users_list(request):
-# 	users = Profile.objects.exclude(user=request.user)
-# 	context = {
-# 		'users': users
-# 	}
-# 	return render(request, "mysocial/friend_list.html", context)
-#
-# def send_friend_request(request, id):
-# 	if request.user.is_authenticated():
-# 		user = get_object_or_404(User, id=id)
-# 		frequest, created = FriendRequest.objects.get_or_create(
-# 			from_user=request.user,
-# 			to_user=user)
-# 		return HttpResponseRedirect('/users')
-#
-# def cancel_friend_request(request, id):
-# 	if request.user.is_authenticated():
-# 		user = get_object_or_404(User, id=id)
-# 		frequest = FriendRequest.objects.filter(
-# 			from_user=request.user,
-# 			to_user=user).first()
-# 		frequest.delete()
-# 		return HttpResponseRedirect('/users')
-#
-# def accept_friend_request(request, id):
-# 	from_user = get_object_or_404(User, id=id)
-# 	frequest = FriendRequest.objects.filter(from_user=from_user, to_user=request.user).first()
-# 	user1 = frequest.to_user
-# 	user2 = from_user
-# 	user1.profile.friends.add(user2.profile)
-# 	user2.profile.friends.add(user1.profile)
-# 	frequest.delete()
-# 	return HttpResponseRedirect('/users/{}'.format(request.user.profile.slug))
-#
-# def delete_friend_request(request, id):
-# 	from_user = get_object_or_404(User, id=id)
-# 	frequest = FriendRequest.objects.filter(from_user=from_user, to_user=request.user).first()
-# 	frequest.delete()
-# 	return HttpResponseRedirect('/users/{}'.format(request.user.profile.slug))
-#
-# def profile_view(request, slug):
-# 	p = Profile.objects.filter(slug=slug).first()
-# 	u = p.user
-# 	sent_friend_requests = FriendRequest.objects.filter(from_user=p.user)
-# 	rec_friend_requests = FriendRequest.objects.filter(to_user=p.user)
-#
-# 	friends = p.friends.all()
-#
-# 	# is this user our friend
-# 	button_status = 'none'
-# 	if p not in request.user.profile.friends.all():
-# 		button_status = 'not_friend'
-#
-# 		# if we have sent him a friend request
-# 		if len(FriendRequest.objects.filter(
-# 			from_user=request.user).filter(to_user=p.user)) == 1:
-# 				button_status = 'friend_request_sent'
-#
-# 	context = {
-# 		'u': u,
-# 		'button_status': button_status,
-# 		'friends_list': friends,
-# 		'sent_friend_requests': sent_friend_requests,
-# 		'rec_friend_requests': rec_friend_requests
-# 	}
-#
-# 	return render(request, "mysocial/prof.html", context)
+class PostViewSet(LikedMixin,viewsets.ModelViewSet):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+    permission_classes = (IsAuthenticatedOrReadOnly,)

@@ -5,6 +5,7 @@ from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
 
 class PostForm(forms.ModelForm):
+    title = forms.CharField(max_length=200,required=False)
 
     class Meta:
         model = Post
