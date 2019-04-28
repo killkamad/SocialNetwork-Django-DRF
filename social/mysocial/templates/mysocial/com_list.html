@@ -15,7 +15,7 @@
                             <h1 style="color:#4a76a8;text-decoration: none">{{ post.title }}</h1>
                         <p style="color:black"><span style="font-weight: bold;font-size: 16px"></span> {{ post.text|linebreaksbr }}</p>
                          {% if post.image %}
-                            <img src='{{ post.image.url }}' class='img' />
+                            <img src='{{ post.image.url }}' class='img' style="margin	:0;" />
                          {% endif %}
                          <p style="padding: 5px" class="author">{{ post.author}} </p>
         {% if post.author == user %}

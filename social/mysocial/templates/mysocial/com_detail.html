@@ -6,19 +6,31 @@
 
 
 {% block content %}
-    <div class="post">
-        {% if post.published_date %}
-            <div class="date">
-                <p class="author"> Автор: {{ post.author}} <p style="oolor:gray;">{{ post.published_date }}</p></p>
-            </div>
+<div class="post">
+                          <p style="color:gray;">{{ post.published_date }}</p>
+                        <p>
+                            <h1 style="color:#4a76a8;text-decoration: none">{{ post.title }}</h1>
+                        <p style="color:black"><span style="font-weight: bold;font-size: 16px"></span> {{ post.text|linebreaksbr }}</p>
+                         {% if post.image %}
+                            <img src='{{ post.image.url }}' class='img' />
+                         {% endif %}
+                         <p style="padding: 5px" class="author">{{ post.author}} </p>
+        {% if post.author == user %}
+            <a style="text-decoration: none" class="change" href="{% url 'com_edit' pk=post.pk %}"><i style="font-size: 22px; padding: 5px" class="far fa-edit"></i></a>
         {% endif %}
-        <h2>{{ post.title }}</h2>
-        <p style="color:black">{{ post.text|linebreaksbr }}</p>
-         {% if post.image %}
-            <img src='{{ post.image.url }}' class='img' />
-         {% endif %}
-            {% if post.author == user %}
-            <a class="change" id="edit_prof" href="{% url 'com_edit' pk=post.pk %}">Изменить</a>
-        {% endif %}
-    </div>
+                        {% if user.is_authenticated %}
+                        <div class="votes">
+                        <form style="padding: 1px" action="{% url 'post-like' pk=post.pk %}" method="post">
+                                {% csrf_token %}
+                                <button style="border: none" type="submit"><i class="far fa-thumbs-up finger like"></i></button>
+                            </form>
+                            <form style="padding: 1px" action="{% url 'post-unlike' pk=post.pk %}" method="post">
+                                {% csrf_token %}
+                                <button style="border: none" type="submit"><i class="far fa-thumbs-down finger dis"></i></button>
+                            </form>
+                        </div>
+                        {% endif %}
+                        <p style="padding: 5px;font-weight: bold">{{ post.total_likes }} отметок "Нравится"</p>
+
+                    </div>
 {% endblock %}

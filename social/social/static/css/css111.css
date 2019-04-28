@@ -5,12 +5,12 @@ body{
     display:flex;
     flex-flow: column ;
     /*border-right:1px solid gray;*/
-    width:10%;
+    width:20%;
     color:white;
     position: absolute;
     left:0;
-    margin-left: 18%;
-    margin-top: -20px;
+    margin-left: 15%;
+    margin-top: 20px;
 
 }
 
@@ -26,7 +26,7 @@ body{
 .content{
     display:flex;
     flex-flow: column ;
-    width:30%;
+    width:35%;
     position: relative;
     margin: auto;
     /*margin-top: -10px;*/
@@ -55,8 +55,8 @@ body{
     height:100%;
 }
 .ssilki a{
-    color:#285473;
     text-decoration:none;
+	color:#6897BB;
 
 
 }
@@ -197,9 +197,9 @@ body{
 footer{
     margin-top: 35px;
     background-color: #4a76a8;
-    font-size: 15px;
+    font-size: 18px;
     width:100%;
-    padding: 25px;
+	padding:30px;
 }
 .footerp{
     display:flex;

@@ -33,10 +33,7 @@ class Post(models.Model):
         self.save()
 
     def __str__(self):
-        return self.likes
-
-    def __repr__(self):
-        return self.likes
+        return self.title
 
     @property
     def total_likes(self):
