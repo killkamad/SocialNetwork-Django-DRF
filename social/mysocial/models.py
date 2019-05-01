@@ -16,7 +16,6 @@ class Like(models.Model):
     content_object = GenericForeignKey('content_type', 'object_id')
 
 class Post(models.Model):
-    # author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     image = models.ImageField(null=True, blank=True, width_field="width_field", height_field="height_field")

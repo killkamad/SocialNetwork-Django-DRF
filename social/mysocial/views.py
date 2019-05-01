@@ -71,25 +71,6 @@ def register(request):
     return render(request, 'mysocial/register.html', {'form': form})
 
 
-#Friendlist
-# def change_friends(request,operation,pk):
-#     friend = Friend.objects.get(current_user=request.user)
-#     friendss = friend.users.all()
-#     friend= User.Objects.get(pk=pk)
-#     if operation == 'add':
-#         Friend.make_friend(request.user, friend)
-#     elif operation == 'remove':
-#         Friend.lose_friend(request.user, friend)
-#     return render(request, 'mysocial/friend_list.html')
-
-# def change_friends(request, operation, pk):
-#     friend = User.objects.get(pk=pk)
-#     if operation == 'add':
-#         Friend.make_friend(request.user, friend)
-#     elif operation == 'remove':
-#         Friend.lose_friend(request.user, friend)
-#     return render(request, 'mysocial/friend_list.html')
-
 # Profile view
 def view_profile(request, pk=None):
     if pk:

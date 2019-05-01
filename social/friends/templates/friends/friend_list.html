@@ -28,17 +28,17 @@
 
 		{% for r_request in rec_friend_requests %}
 			<p><a style="font-size: 25px;" href="{{ r_request.from_user.profile.get_absolute_url }}">{{ r_request.from_user.username }}</a></p>
-			<small><a class='btn btn-primary' href="/users/friend-request/accept/{{ r_request.from_user.id }}">Accept</a></small>
-			<small><a class='btn btn-warning' href="/users/friend-request/delete/{{ r_request.from_user.id }}">Ignore</a></small>
+			<small><a class='btn btn-primary' href="/users/friend-request/accept/{{ r_request.from_user.id }}">Принять</a></small>
+			<small><a class='btn btn-warning' href="/users/friend-request/delete/{{ r_request.from_user.id }}">Отклонить</a></small>
 		{% endfor %}
 
 
 	{% else %}
 
 		{% if button_status == 'not_friend' %}
-			<small><a class='btn btn-primary' href="/users/friend-request/send/{{ u.id }}">Add Friend</a></small>
+			<small><a class='btn btn-primary' href="/users/friend-request/send/{{ u.id }}">Добавить</a></small>
 		{% elif button_status == 'friend_request_sent' %}
-			<small><a class="btn btn-warning" href="/users/friend-request/cancel/{{ u.id }}">Cancel Request</a></small>
+			<small><a class="btn btn-warning" href="/users/friend-request/cancel/{{ u.id }}">Отменить запрос</a></small>
 		{% endif %}
 
 	{% endif %}
