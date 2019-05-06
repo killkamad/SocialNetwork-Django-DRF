@@ -2,3 +2,4 @@
 myvenv
 db.sqlite3
 media_cdn
+migrations

@@ -10,16 +10,22 @@ from django.contrib import messages
 
 from django.contrib.auth import get_user_model
 from django.contrib.contenttypes.models import ContentType
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from .serializers import PostSerializer
 from .mixins import LikedMixin
+
+from rest_framework import generics, permissions
+from .permissions import IsOwner
+
+
 
 
 # Создание постов, изменение, просмотр
 def com_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     return render(request, 'mysocial/com_list.html', {'posts': posts})
+
 
 def com_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
@@ -112,22 +118,16 @@ def change_password(request):
 
 User = get_user_model()
 def add_like(obj, user):
-    """Лайкает `obj`.
-    """
     obj_type = ContentType.objects.get_for_model(obj)
     like, is_created = Like.objects.get_or_create(
         content_type=obj_type, object_id=obj.id, user=user)
     return like
 def remove_like(obj, user):
-    """Удаляет лайк с `obj`.
-    """
     obj_type = ContentType.objects.get_for_model(obj)
     Like.objects.filter(
         content_type=obj_type, object_id=obj.id, user=user
     ).delete()
 def is_fan(obj, user) -> bool:
-    """Проверяет, лайкнул ли `user` `obj`.
-    """
     if not user.is_authenticated:
         return False
     obj_type = ContentType.objects.get_for_model(obj)
@@ -135,8 +135,6 @@ def is_fan(obj, user) -> bool:
         content_type=obj_type, object_id=obj.id, user=user)
     return likes.exists()
 def get_fans(obj):
-    """Получает всех пользователей, которые лайкнули `obj`.
-    """
     obj_type = ContentType.objects.get_for_model(obj)
     return User.objects.filter(
         likes__content_type=obj_type, likes__object_id=obj.id)
@@ -144,4 +142,9 @@ def get_fans(obj):
 class PostViewSet(LikedMixin,viewsets.ModelViewSet):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
-    permission_classes = (IsAuthenticatedOrReadOnly,)
+    # permission_classes = (IsAuthenticatedOrReadOnly,)
+    permission_classes = (
+        permissions.IsAuthenticated, IsOwner)
+
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)

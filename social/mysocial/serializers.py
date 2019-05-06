@@ -7,6 +7,7 @@ from django.contrib.auth import get_user_model
 class PostSerializer(serializers.ModelSerializer):
 
     is_fan = serializers.SerializerMethodField()
+    author = serializers.ReadOnlyField(source='author.username')
 
     class Meta:
         model = Post
