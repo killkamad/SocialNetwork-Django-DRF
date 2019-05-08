@@ -20,6 +20,7 @@ class PostSerializer(serializers.ModelSerializer):
             'published_date',
             'total_likes',
             'is_fan',
+			'image',
         )
 
     def get_is_fan(self, obj) -> bool:
